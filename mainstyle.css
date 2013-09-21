@@ -1,0 +1,21 @@
+body
+{
+	background: url("blackwood.jpg");
+}
+
+#main
+{
+	width: 50%;
+	background-color: white;
+	margin-left: 25%;
+	text-align: center;
+}
+
+h1#logo
+{
+	color: red;
+	font-size: 42px;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+}
