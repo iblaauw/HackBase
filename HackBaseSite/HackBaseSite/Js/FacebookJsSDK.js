@@ -1,4 +1,5 @@
-﻿  window.fbAsyncInit = function() {
+﻿window.fbLoggedIn = false;
+window.fbAsyncInit = function () {
       // init the FB JS SDK
       FB.init({
           appId: '218192968345470',                        // App ID from the app dashboard
@@ -9,6 +10,40 @@
       });
 
       // Additional initialization code such as adding Event Listeners goes here
+      FB.getLoginStatus(function (response) {
+          if (response.status === 'connected') {
+              window.fbLoggedIn = true;
+              var uid = response.authResponse.userID;
+              FB.api('/me', function (response3) {
+                  console.log('Good to see you, ' + response3.name + '.');
+              });
+              var accessToken = response.authResponse.accessToken;
+          } else if (response.status === 'not_authorized') {
+              window.fbLoggedIn = false;
+              //Logged into facebook, but haven't 
+              FB.login(function (response2) {
+                  if (response2.authResponse) {
+                      window.fbLoggedIn = true;
+                      alert("Test1");
+                      console.log('Welcome! Fetching your information...');
+                      FB.api('/me', function (response3) {
+                          console.log('Good to see you, ' + response3.name + '.');
+                      });
+                  } else {
+                      console.log('User cancelled login or did not fully authorize.');
+                  }
+              });
+          } else {
+              window.fbLoggedIn = false;
+              //Not logged in
+          }
+
+          if (window.fbLoggedIn)
+            $(".fb-login-button").hide();
+      });
+
+      
+
   };
 
 // Load the SDK asynchronously
@@ -20,23 +55,3 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-FB.getLoginStatus(function (response) {
-    if (response.status === 'connected') {
-        var uid = response.authResponse.userID;
-        var accessToken = response.authResponse.accessToken;
-    } else if (response.status === 'not_authorized') {
-        //Logged into facebook, but haven't 
-        FB.login(function (response2) {
-            if (response2.authResponse) {
-                console.log('Welcome! Fetching your information...');
-                FB.api('/me', function (response3) {
-                    console.log('Good to see you, ' + response3.name + '.');
-                });
-            } else {
-                console.log('User cancelled login or did not fully authorize.');
-            }
-        });
-    } else {
-        //Not logged in
-    }
-});
