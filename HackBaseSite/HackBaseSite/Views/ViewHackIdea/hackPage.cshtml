@@ -5,7 +5,7 @@
 }
 		<div class="row">
 		<div class="span5 offset4">
-		<h2>Your Hack</h2>
+		<h2>Your Hack Idea</h2>
 		
 	<div id="description">
   			Hack Name: @Model.Name<br>
@@ -27,7 +27,6 @@
 		</div>
 <script type="text/javascript">
     function PostLike(Id) {
-        alert("Start Ajax");
         $.ajax({
             type: "POST",
             url: "http://localhost:49407/Index/Like/"+Id,
