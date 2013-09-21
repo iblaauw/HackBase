@@ -21,5 +21,10 @@ namespace HackBaseSite.Controllers
             return View();
         }
 
+        public ActionResult FillOutForm()
+        {
+            return View();
+        }
+
     }
 }

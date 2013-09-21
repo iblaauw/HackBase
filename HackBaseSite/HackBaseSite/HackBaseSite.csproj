@@ -114,7 +114,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="App_Themes\Standard Theme\blackwood.jpg" />
+    <Content Include="App_Themes\Standard Theme\HackBase-1.png" />
     <Content Include="App_Themes\Standard Theme\stylesheet.css" />
+    <Content Include="bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <None Include="Views\Index\filloutform.cshtml" />
     <Content Include="Global.asax" />
     <None Include="Views\Index\index.cshtml" />
     <Content Include="Web.config" />
@@ -126,6 +137,8 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Index\PostHack.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Main Page.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
