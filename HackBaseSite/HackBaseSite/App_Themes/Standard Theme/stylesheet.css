@@ -1,0 +1,62 @@
+	body {
+		background-image: url("blackwood.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	#main {
+		height: 300px;
+		background-color: #BFE1FF;
+		opacity: 0.7;
+		font-family: Helvetica, Arial, sans-serif;
+		color: rgba(0, 0, 0, .8);
+		margin-top: 10%;
+		border-radius: 10px;
+		padding: 20px;
+	}
+
+	#description{
+		margin-bottom: 30px;
+	}
+
+	#categories {
+		width: 300px;
+		height: 300px;
+		color: rgba(0, 0, 0, .8);
+	}
+
+	#background {
+		margin-top: 3%;
+	}
+
+	h1 {
+		color: red;
+		font-size: 72px;
+		text-align: center;
+	}
+
+	ul{
+		list-style: none;
+		width: 245px;
+		height: 65px;
+		margin: 0 auto;
+		padding: 0px;
+	}
+
+	li{
+		width: 60px;
+		float: left;
+	}
+	
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	a:visited{
+		color: black;
+	}
+
+	a:hover{
+		color: red;
+	}
