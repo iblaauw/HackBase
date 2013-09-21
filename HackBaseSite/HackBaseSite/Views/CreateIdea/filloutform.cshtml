@@ -1,0 +1,21 @@
+@model Models.HackIdea
+@{
+    ViewBag.Title = "Share Your Hack";
+}
+		<div class="row">
+		<div class="span5 offset4">
+		<h2>Share Your Hack</h2>
+        @using(Html.BeginForm("Post","CreateIdea"))
+        {
+		<div id="description">
+  			Hack Name:<input type="text" name="hackName"><br>
+  			Hack Description: <input type="text" name="hackDescription"><br>
+  			Tags (Separate By Commas):<input type="text" name="hackTags"><br>
+  			In Progress: <input type="radio" name="yesno" value="Yes" checked> Yes
+						<input type="radio" name="yesno" value="No"> No<br><br>
+  			<input type="submit">
+		</div>
+        }
+
+		</div>
+		</div>
