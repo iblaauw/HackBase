@@ -12,7 +12,7 @@
   			Hack Description: @Model.Description<br>
   			Hack Author: @Model.Author<br>
   			Date Created: @Model.CreatedOn<br>
-  			<u>I Like This Hack!</u> &nbsp; @Model.NumLikes People Like This Hack<br>
+  			<u onclick="javascript:PostLike( '@Model.Id.ToString()' )">I Like This Hack!</u> &nbsp; <span id="numbLikes">@Model.NumLikes</span> People Like This Hack<br>
   		<div id="navcontainer">
 			<ul id="navlist">
                 @foreach(string tag in Model.Tags.Split(new[]{", "}, StringSplitOptions.RemoveEmptyEntries))
@@ -25,3 +25,25 @@
 
 		</div>
 		</div>
+<script type="text/javascript">
+    function PostLike(Id) {
+        alert("Start Ajax");
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:49407/Index/Like/"+Id,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: "{id: '"+Id+"'}",
+            success: function () {
+                alert("Finish Ajax");
+                var counter = $('#numbLikes');
+                counter.text(Number(counter.text()) + 1);
+            },
+            error: function () {
+                var counter = $('#numbLikes');
+                counter.text(Number(counter.text()) + 1);
+            }
+
+        });
+    }
+</script>

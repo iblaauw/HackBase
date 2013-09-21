@@ -23,13 +23,10 @@ namespace HackBaseSite.Controllers
         [HttpPost]
         public ActionResult Post(Models.HackIdea model)
         {
-            string connectionString = "mongodb://localhost";
-            string databaseName = "HackDb";
-
             model.CreatedOn = DateTime.Now;
 
-            var client = new MongoClient(connectionString);
-            var database = client.GetServer().GetDatabase(databaseName);
+            var client = new MongoClient(IndexController.ConnectionString);
+            var database = client.GetServer().GetDatabase(IndexController.DatabaseName);
             var collection = database.GetCollection<Models.HackIdea>("HackIdeas");
 
             var result = collection.Insert(model);

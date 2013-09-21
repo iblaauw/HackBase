@@ -17,9 +17,7 @@ namespace HackBaseSite.Controllers
         public ActionResult Index(string id)
         {
             MongoDB.Bson.ObjectId objectId = new MongoDB.Bson.ObjectId(id);
-            string connectionString = "mongodb://localhost";
-            string databaseName = "HackDb";
-            var database = new MongoClient(connectionString).GetServer().GetDatabase(databaseName);
+            var database = new MongoClient(IndexController.ConnectionString).GetServer().GetDatabase(IndexController.DatabaseName);
             var collection = database.GetCollection<Models.HackIdea_Id>("HackIdeas");
 
             var query = Query<Models.HackIdea_Id>.EQ(e => e.Id, objectId);
