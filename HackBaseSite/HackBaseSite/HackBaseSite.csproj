@@ -150,6 +150,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\HackIdea.cs" />
+    <Compile Include="Models\TopTenItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -170,6 +171,7 @@
     <None Include="Views\CreateIdea\filloutform.cshtml" />
     <Content Include="Global.asax" />
     <None Include="Views\Index\index.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TopTenItem.cshtml" />
     <None Include="Views\ViewHackIdea\hackPage.cshtml" />
     <Content Include="Js\FacebookJsSDK.js" />
     <Content Include="Web.config" />

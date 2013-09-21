@@ -1,22 +1,14 @@
+@model IEnumerable<Models.TopTenItem>
+
 @{
     ViewBag.Title = "HackBase";
 }
 		<div class="row">
-		<div class="span5 offset4">
+		<div class="span7 offset3">
 		<h2>Top 10 Hacks</h2>
 		
 		<div id="description">
-			1. Hack1 - Ian Blaauw<br>
-			2. Hack2 - Eric Edmond<br>
-			3. Hack3 - Jon Soifer<br>
-			4. Hack4 - John Doe<br>
-			5. Hack5 - Jane Doe<br>
-			6. Hack6 - John Doe<br>
-			7. Hack7 - John Doe<br>
-			8. Hack8 - John Doe<br>
-			9. Hack9 - John Doe<br>
-			10. Hack10 - John Doe<br>
-
+            @Html.EditorFor(t => t)
 			<ul>
 			<li><a class="icon-wrapper" target="_blank" href="">
 				<h2>Social</h2>

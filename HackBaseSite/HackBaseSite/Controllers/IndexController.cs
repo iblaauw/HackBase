@@ -11,15 +11,26 @@ namespace HackBaseSite.Controllers
 {
     public class IndexController : Controller
     {
-        public const string ConnectionString = "mongodb://localhost";
+        public const string ConnectionString = "mongodb://54.225.128.9:27017";
         public const string DatabaseName = "HackDb";
         
         //
         // GET: /Index/
         public ActionResult Index()
         {
+            var database = new MongoClient(IndexController.ConnectionString).GetServer().GetDatabase(IndexController.DatabaseName);
+            var collection = database.GetCollection<Models.HackIdea_Id>("HackIdeas");
 
-            return View();
+            var top10 = collection.FindAll().OrderByDescending(h => h.NumLikes).Take(10)
+                .Select(h => new Models.TopTenItem {
+                    Author = h.Author,
+                    Id = h.Id,
+                    Name = h.Name,
+                    NumLikes = h.NumLikes
+                })
+            .ToList();
+
+            return View(top10);
         }
 
         public ActionResult PostHack()

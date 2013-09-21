@@ -4,15 +4,15 @@
     ViewBag.Title = "Hack Page";
 }
 		<div class="row">
-		<div class="span5 offset4">
-		<h2>Your Hack Idea</h2>
+		<div class="span7 offset3">
+		<h2>@Model.Name</h2>
 		
 	<div id="description">
   			Hack Name: @Model.Name<br>
   			Hack Description: @Model.Description<br>
   			Hack Author: @Model.Author<br>
   			Date Created: @Model.CreatedOn<br>
-  			<u onclick="javascript:PostLike( '@Model.Id.ToString()' )">I Like This Hack!</u> &nbsp; <span id="numbLikes">@Model.NumLikes</span> People Like This Hack<br>
+  			<u onclick="javascript:PostLike( '@Model.Id.ToString()' )"><a>I Like This Hack!</a></u> &nbsp; <span id="numbLikes">@Model.NumLikes</span> People Like This Hack<br>
   		<div id="navcontainer">
 			<ul id="navlist">
                 @foreach(string tag in Model.Tags.Split(new[]{", "}, StringSplitOptions.RemoveEmptyEntries))
