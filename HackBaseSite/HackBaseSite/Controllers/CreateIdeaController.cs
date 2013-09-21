@@ -17,8 +17,9 @@ namespace HackBaseSite.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post()
+        public ActionResult Post(Models.HackIdea model)
         {
+            //
             return RedirectToAction("Index", "Index");
         }
 

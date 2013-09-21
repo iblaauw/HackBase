@@ -9,9 +9,10 @@ namespace Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Tags { get; set; }
+        public string[] Tags { get; set; }
         public bool InProgress { get; set; }
         public string Author { get; set; }
         public DateTime CreatedOn { get; set; }
+        public int NumLikes { get; set; }
     }
 }

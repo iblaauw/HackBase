@@ -8,11 +8,12 @@
         @using(Html.BeginForm("Post","CreateIdea"))
         {
 		<div id="description">
-  			Hack Name:<input type="text" name="hackName"><br>
-  			Hack Description: <input type="text" name="hackDescription"><br>
-  			Tags (Separate By Commas):<input type="text" name="hackTags"><br>
-  			In Progress: <input type="radio" name="yesno" value="Yes" checked> Yes
-						<input type="radio" name="yesno" value="No"> No<br><br>
+  			Hack Name: @Html.TextBoxFor(f => f.Name)<br>
+  			Hack Description: @Html.TextBoxFor(f => f.Description)<br>
+  			Tags (Separate By Commas):@Html.TextBoxFor(f => f.Tags)<br>
+            
+  			In Progress: @Html.RadioButtonFor(f => f.InProgress, true) Yes
+						@Html.RadioButtonFor(f => f.InProgress, false) No<br><br>
   			<input type="submit">
 		</div>
         }

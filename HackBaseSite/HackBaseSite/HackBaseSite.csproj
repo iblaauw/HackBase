@@ -106,6 +106,7 @@
   <ItemGroup>
     <Compile Include="Controllers\CreateIdeaController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\ViewHackIdeaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -130,6 +131,7 @@
     <None Include="Views\CreateIdea\filloutform.cshtml" />
     <Content Include="Global.asax" />
     <None Include="Views\Index\index.cshtml" />
+    <None Include="Views\ViewHackIdea\hackPage.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
