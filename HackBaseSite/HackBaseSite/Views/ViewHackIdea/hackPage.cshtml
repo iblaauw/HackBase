@@ -5,14 +5,14 @@
 }
 		<div class="row">
 		<div class="span5 offset4">
-		<h2>Your Hack</h2>
+		<h2>Your Hack Idea</h2>
 		
 	<div id="description">
   			Hack Name: @Model.Name<br>
   			Hack Description: @Model.Description<br>
   			Hack Author: @Model.Author<br>
   			Date Created: @Model.CreatedOn<br>
-  			<u>I Like This Hack!</u> &nbsp; @Model.NumLikes People Like This Hack<br>
+  			<u><a>I Like This Hack!</a></u> &nbsp; @Model.NumLikes People Like This Hack<br>
   		<div id="navcontainer">
 			<ul id="navlist">
                 @foreach(string tag in Model.Tags.Split(new[]{", "}, StringSplitOptions.RemoveEmptyEntries))
