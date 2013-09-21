@@ -1,4 +1,4 @@
-@model Models.HackIdea
+@model Models.HackIdea_Id
 
 @{
     ViewBag.Title = "Hack Page";
@@ -15,7 +15,7 @@
   			<u>I Like This Hack!</u> &nbsp; @Model.NumLikes People Like This Hack<br>
   		<div id="navcontainer">
 			<ul id="navlist">
-                @foreach(string tag in Model.Tags)
+                @foreach(string tag in Model.Tags.Split(new[]{", "}, StringSplitOptions.RemoveEmptyEntries))
                 {
 			        <li><a href="#"><u>@tag</u></a></li>
     			}

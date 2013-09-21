@@ -50,3 +50,7 @@ C:\Users\Ian Blaauw\Desktop\MHacks_2013\HackBase\HackBaseSite\HackBaseSite\bin\S
 C:\Users\Ian Blaauw\Desktop\MHacks_2013\HackBase\HackBaseSite\HackBaseSite\obj\Debug\HackBaseSite.csprojResolveAssemblyReference.cache
 C:\Users\Ian Blaauw\Desktop\MHacks_2013\HackBase\HackBaseSite\HackBaseSite\obj\Debug\HackBaseSite.dll
 C:\Users\Ian Blaauw\Desktop\MHacks_2013\HackBase\HackBaseSite\HackBaseSite\obj\Debug\HackBaseSite.pdb
+C:\Users\Ian Blaauw\Desktop\MHacks_2013\HackBase\HackBaseSite\HackBaseSite\bin\MongoDB.Bson.dll
+C:\Users\Ian Blaauw\Desktop\MHacks_2013\HackBase\HackBaseSite\HackBaseSite\bin\MongoDB.Driver.dll
+C:\Users\Ian Blaauw\Desktop\MHacks_2013\HackBase\HackBaseSite\HackBaseSite\bin\MongoDB.Bson.xml
+C:\Users\Ian Blaauw\Desktop\MHacks_2013\HackBase\HackBaseSite\HackBaseSite\bin\MongoDB.Driver.xml
