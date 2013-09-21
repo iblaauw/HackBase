@@ -1,0 +1,31 @@
+# Visual Studio artifacts
+bin
+obj
+*.user
+*.suo
+*.vsp
+*.csproj.VisualState.xml
+*.vbproj.VisualState.xml
+*.cache
+Debug
+TestResults
+
+# CodeReview
+codereview.rc
+
+# Vim artifacts
+*.swp
+*~
+
+# Nupkg artifacts
+*.nupkg
+
+# NCrunch artifacts
+*.ncrunch*
+
+# Merge tool artifacts
+*.cs.orig
+*.vb.orig
+
+# Other
+artifacts
