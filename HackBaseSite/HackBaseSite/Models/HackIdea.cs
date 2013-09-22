@@ -14,6 +14,7 @@ namespace Models
         public string Author { get; set; }
         public DateTime CreatedOn { get; set; }
         public int NumLikes { get; set; }
+        public string GithubRepos { get; set; }
     }
 
     public class HackIdea_Id
@@ -26,5 +27,6 @@ namespace Models
         public string Author { get; set; }
         public DateTime CreatedOn { get; set; }
         public int NumLikes { get; set; }
+        public string GithubRepos { get; set; }
     }
 }
