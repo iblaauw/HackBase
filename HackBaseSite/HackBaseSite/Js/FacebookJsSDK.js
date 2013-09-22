@@ -38,8 +38,22 @@ window.fbAsyncInit = function () {
               //Not logged in
           }
 
+          $(function () {
+              if (!window.fbLoggedIn && !PageUnrestricted) {
+                  document.location.href = "/Index?login=true";
+              }
+          });
+
+
           if (window.fbLoggedIn)
-            $(".fb-login-button").hide();
+              $(".fb-login-button").hide();
+
+          FB.Event.subscribe('auth.authResponseChange', function (response) {
+              document.location.href = "/";
+          });
+
+
+
       });
 
       

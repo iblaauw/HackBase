@@ -3,8 +3,25 @@
 @{
     ViewBag.Title = "HackBase";
 }
+<script type="text/javascript">
+    PageUnrestricted = true;
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    $(function () {
+        if (getParameterByName("login") == "true")
+            $("#loginText").show();
+    });
+
+</script>
 		<div class="row">
 		<div class="span7 offset3">
+        <h2 id="loginText" style="color: red; display:none;">You must login in order to continue.</h2>
 		<h2>Top 10 Hacks</h2>
 		
 		<div id="description">
