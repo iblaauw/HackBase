@@ -15,6 +15,7 @@ window.fbAsyncInit = function () {
           if (response.status === 'connected') {
               window.fbLoggedIn = true;
               var uid = response.authResponse.userID;
+              window.UserId = uid;
               FB.api('/me', function (response3) {
                   window.AuthorName = response3.name;
                   authorLock.resolve();
@@ -50,6 +51,8 @@ window.fbAsyncInit = function () {
 
           if (window.fbLoggedIn)
               $(".fb-login-button").hide();
+          else
+              $("#CreateButton").hide();
 
           FB.Event.subscribe('auth.authResponseChange', function (response) {
               document.location.href = "/";

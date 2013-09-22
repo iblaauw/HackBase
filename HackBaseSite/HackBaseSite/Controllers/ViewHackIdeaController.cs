@@ -26,5 +26,21 @@ namespace HackBaseSite.Controllers
             return View("hackPage",model);
         }
 
+        [HttpPost]
+        public ActionResult UpdateRepos(string id, string URL)
+        {
+            MongoDB.Bson.ObjectId objectId = new MongoDB.Bson.ObjectId(id);
+            var database = new MongoClient(IndexController.ConnectionString).GetServer().GetDatabase(IndexController.DatabaseName);
+            var collection = database.GetCollection<Models.HackIdea_Id>("HackIdeas");
+
+            var query = Query<Models.HackIdea_Id>.EQ(e => e.Id, objectId);
+            Models.HackIdea_Id model = collection.FindOne(query);
+
+            model.GithubRepos += " "+URL;
+            collection.Save(model);
+
+            return View("hackPage", model);
+        }
+
     }
 }

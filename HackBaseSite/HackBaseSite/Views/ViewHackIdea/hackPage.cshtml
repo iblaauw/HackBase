@@ -18,7 +18,23 @@
 			<ul id="navlist">
                 @{Html.RenderPartial("TagLink", Model.Tags);}
 			</ul>
-      Working on this hack? Link to your GitHub Repository Here: @Html.TextBoxFor(f => f.GithubRepos)
+              Working on this hack? Link to your GitHub Repository Here: 
+              @using (Html.BeginForm("UpdateRepos", "ViewHackIdea", FormMethod.Post, new { id="GitHubForm" }))
+              {
+                //@Html.TextBoxFor(f => f.GithubRepos, new { id = "Repos" });
+                  <input type="text" id="Repos" name="URL" />
+                  <input type="hidden" name="id" value="@Model.Id" />
+              }
+              <script type="text/javascript">
+                  $(document).ready(function () {
+                      $('#Repos').keypress(function (e) {
+                          if (e.keyCode == 13)
+                              $('#GitHubForm').submit();
+
+                      });
+                  });
+            </script>
+                    
 		</div>
 	</div>
 
@@ -31,15 +47,14 @@
             url: "http://localhost:49407/Index/Like/"+Id,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            data: "{id: '"+Id+"'}",
-            success: function () {
-                alert("Finish Ajax");
+            data: "{id: '"+Id+"', userId: '"+window.UserId+"'}",
+            success: function (data) {
                 var counter = $('#numbLikes');
-                counter.text(Number(counter.text()) + 1);
+                counter.text(data);
             },
-            error: function () {
+            error: function (data) {
                 var counter = $('#numbLikes');
-                counter.text(Number(counter.text()) + 1);
+                counter.text(data);
             }
 
         });

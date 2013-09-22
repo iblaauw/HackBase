@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="Models\Author.cs" />
     <Compile Include="Controllers\CreateIdeaController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="App_Themes\Standard Theme\blackwood.jpg" />
     <Content Include="App_Themes\Standard Theme\HackBase-1.png" />
+    <Content Include="App_Themes\Standard Theme\middlewood.jpg" />
     <Content Include="App_Themes\Standard Theme\stylesheet.css" />
     <Content Include="bootstrap\css\bootstrap-responsive.css" />
     <Content Include="bootstrap\css\bootstrap-responsive.min.css" />

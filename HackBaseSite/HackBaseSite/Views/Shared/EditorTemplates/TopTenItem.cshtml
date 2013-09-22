@@ -1,4 +1,6 @@
 ﻿@model Models.TopTenItem
 
-<h2>@Html.ActionLink(Model.Name, "Index", "ViewHackIdea", new { id=Model.Id }, null) (@Model.NumLikes likes)</h2>
-<h3>@Model.Author</h3>
+<div class="TopTen">
+    <h2>@Html.ActionLink(Model.Name, "Index", "ViewHackIdea", new { id=Model.Id }, null) (@Model.NumLikes likes)</h2>
+    <h3>@Model.Author</h3>
+</div>
