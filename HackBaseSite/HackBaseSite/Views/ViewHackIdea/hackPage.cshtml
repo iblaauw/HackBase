@@ -12,7 +12,7 @@
   			Hack Description: @Model.Description<br>
   			Hack Author: @Model.Author<br>
   			Date Created: @Model.CreatedOn<br>
-        Current Github Repositories: @Model.GithubRepos<br>
+        Current GitHub Repositories: @Model.GithubRepos<br>
   			<u onclick="javascript:PostLike( '@Model.Id.ToString()' )"><a>I Like This Hack!</a></u> &nbsp; <span id="numbLikes">@Model.NumLikes</span> People Like This Hack<br>
   		<div id="navcontainer">
 			<ul id="navlist">
@@ -21,7 +21,7 @@
 			        <li><a href="#"><u>@tag</u></a></li>
     			}
 			</ul>
-      Working on this hack? Link to your Github Repository Here: @HTML.TextBoxFor(f => f.GithubRepos)
+      Working on this hack? Link to your GitHub Repository Here: @HTML.TextBoxFor(f => f.GithubRepos)
 		</div>
 	</div>
 
