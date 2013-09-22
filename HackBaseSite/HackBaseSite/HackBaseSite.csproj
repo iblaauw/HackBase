@@ -145,6 +145,7 @@
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="Controllers\CreateIdeaController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\ViewHackIdeaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -172,6 +173,8 @@
     <Content Include="Global.asax" />
     <None Include="Views\Index\index.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TopTenItem.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\HackIdea_Id.cshtml" />
     <None Include="Views\ViewHackIdea\hackPage.cshtml" />
     <Content Include="Js\FacebookJsSDK.js" />
     <Content Include="Web.config" />
