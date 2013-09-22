@@ -175,6 +175,7 @@
     <Content Include="Views\Shared\EditorTemplates\TopTenItem.cshtml" />
     <Content Include="Views\Search\Search.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\HackIdea_Id.cshtml" />
+    <Content Include="Views\Shared\TagLink.cshtml" />
     <None Include="Views\ViewHackIdea\hackPage.cshtml" />
     <Content Include="Js\FacebookJsSDK.js" />
     <Content Include="Web.config" />

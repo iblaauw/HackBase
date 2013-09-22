@@ -25,7 +25,7 @@
 	</div>
 	
     <div class="row-fluid">
-        <div class="offset5 span2">
+        <div class="offset5 span3">
             @using (Html.BeginForm("Search", "Search"))
             {
                 <input type="text" name="text" />
@@ -36,7 +36,14 @@
             <div class="fb-login-button" data-size="xlarge" data-width="200px"></div>
         </div>
     </div>
-
+    <div class="row">
+        <div class="offset7 span3">
+            @using (Html.BeginForm("Index", "CreateIdea"))
+            {
+                <input type="submit" value="Create a new Hack Idea"></input>
+            }
+        </div>
+    </div>
 	<div class="row-fluid">
 	<div id="main" class="span6 offset3">
         @RenderBody()

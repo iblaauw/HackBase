@@ -1,0 +1,6 @@
+﻿@model string
+
+@foreach(string str in Model.Split(new string[] {", "},StringSplitOptions.RemoveEmptyEntries))
+{
+    @Html.ActionLink(str,"GetTags","Search", new { text = str }, null) <span>&nbsp;</span>
+}

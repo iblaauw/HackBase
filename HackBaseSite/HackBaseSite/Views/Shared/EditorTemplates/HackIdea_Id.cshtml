@@ -5,5 +5,5 @@
 (@Html.DisplayFor(f => f.NumLikes))
 - @Html.DisplayFor(f => f.Author) </p>
 <p>@Html.DisplayFor(f => f.Description)</p>
-<p>Tags: @Html.DisplayFor(f => f.Tags)</p>
+<p>Tags: @{ Html.RenderPartial("TagLink", Model.Tags); }</p>
 </li>

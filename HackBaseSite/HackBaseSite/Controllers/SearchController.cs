@@ -24,10 +24,17 @@ namespace HackBaseSite.Controllers
             return View(searchResults);
         }
 
-        [HttpPost]
-        public ActionResult SearchTags(string text)
+        [HttpGet]
+        public ActionResult GetTags(string text)
         {
-            return View();
+            var database = new MongoClient(IndexController.ConnectionString).GetServer().GetDatabase(IndexController.DatabaseName);
+            var collection = database.GetCollection<Models.HackIdea_Id>("HackIdeas");
+
+            var searchResults = collection.FindAll().Where(
+                h => (h.Tags ?? "").Split(new string[] {", "}, StringSplitOptions.RemoveEmptyEntries).Contains(text))
+                .ToList();
+            
+            return View("Search",searchResults);
         }
 
     }
