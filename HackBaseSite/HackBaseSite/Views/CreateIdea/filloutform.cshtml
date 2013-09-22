@@ -15,8 +15,16 @@
   			In Progress: @Html.RadioButtonFor(f => f.InProgress, true) Yes
 						@Html.RadioButtonFor(f => f.InProgress, false) No<br><br>
   			<input type="submit">
+            <input id="authorValue" type="hidden" name="Author" value="" />
 		</div>
         }
 
 		</div>
 		</div>
+<script>
+    function SetAuthor() {
+        $("#authorValue").val(window.AuthorName);
+    }
+    authorLock.done(SetAuthor);
+
+</script>

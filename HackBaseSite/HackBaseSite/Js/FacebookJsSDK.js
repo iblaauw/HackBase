@@ -1,4 +1,5 @@
 ﻿window.fbLoggedIn = false;
+var authorLock = $.Deferred();
 window.fbAsyncInit = function () {
       // init the FB JS SDK
       FB.init({
@@ -15,6 +16,8 @@ window.fbAsyncInit = function () {
               window.fbLoggedIn = true;
               var uid = response.authResponse.userID;
               FB.api('/me', function (response3) {
+                  window.AuthorName = response3.name;
+                  authorLock.resolve();
                   console.log('Good to see you, ' + response3.name + '.');
               });
               var accessToken = response.authResponse.accessToken;
