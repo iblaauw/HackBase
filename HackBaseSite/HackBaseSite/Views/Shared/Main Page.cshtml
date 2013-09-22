@@ -1,9 +1,8 @@
-﻿<!DOCTYPE html>
-<html>
+<!--DOCTYPE html-->
+<!--html>
 <head>
-
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>/@@/ViewBag.Title</title>
 	<script src="http://code.jquery.com/jquery.js"></script>
     <script>
         PageUnrestricted = false;
@@ -27,7 +26,7 @@
 	
     <div class="row-fluid">
         <div class="offset5 span3">
-            @using (Html.BeginForm("Search", "Search"))
+            /@@/using (Html.BeginForm("Search", "Search"))
             {
                 <input type="text" name="text" />
                 <input type="submit" value="Search" />
@@ -39,7 +38,7 @@
     </div>
     <div class="row">
         <div class="offset7 span3">
-            @using (Html.BeginForm("Index", "CreateIdea"))
+            /@@/using (Html.BeginForm("Index", "CreateIdea"))
             {
                 <input id="CreateButton" type="submit" value="Create a new Hack Idea"></input>
             }
@@ -47,7 +46,7 @@
     </div>
 	<div class="row-fluid">
 	<div id="main" class="span6 offset3">
-        @RenderBody()
+        /@@/RenderBody()
 
 	</div>
 	</div>
@@ -55,5 +54,171 @@
 	<script src="~/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
+
+</!--html-->
+
+
+
+
+<!--html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@@ViewBag.Title</title>
+	    <script src="http://code.jquery.com/jquery.js"></script>
+        <script>
+            PageUnrestricted = false;
+        </script>
+	    <link rel="stylesheet" type="text/css" href="~/App_Themes/Standard Theme/stylesheet.css">
+	    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row-fluid">
+                <div id="leftPanel" class="span3">
+                    <a href="/"><img class="logo" logo="icon" src="~/App_Themes/Standard Theme/HackBase-1.png"></a>
+                </div>
+                <div id="centerPanel" class="span6">
+                    <div id="main">@@RenderBody()</div>
+                </div>
+                <div id="rightPanel" class="span3">
+                    <div class="row">
+                        <div class="span4">
+                            @@using (Html.BeginForm("Search", "Search"))
+                            {
+                                <input type="text" name="text" />
+                                <input type="submit" value="Search" />
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span4">
+                            <div class="fb-login-button" data-size="xlarge" data-width="200px"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span4">
+                            @@using (Html.BeginForm("Index", "CreateIdea"))
+                            {
+                                <input id="CreateButton" type="submit" value="Create a new Hack Idea"></input>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</!--html-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	
+    <head>
+		
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Cardex - Personal site template</title>
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/Standard Theme/style.css" media="screen">
+    <!--[if IE]>
+			
+        <link rel="stylesheet" type="text/css" href="ie.css" media="screen">
+		
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/Standard Theme/lightbox.css" media="screen">
+    <script type="text/javascript" src="~/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.lightbox-0.5.pack.js"></script>
+    <script type="text/javascript" src="~/js/cufon-yui.js"></script>
+    <script type="text/javascript" src="~/js/Desyrel_400.font.js"></script>
+
+    <script type="text/javascript">
+        PageUnrestricted = false;
+    </script>
+	<link rel="stylesheet" type="text/css" href="~/App_Themes/Standard Theme/stylesheet.css">
+
+    <!-- Cufon text replacement -->		
+    <script type="text/javascript">
+			
+        $(document).ready(function(){
+				
+            Cufon.replace('#about .right ul li');
+				
+            Cufon.replace('h2', { textShadow: '0 2px rgba(0, 0, 0, 0.15)' });
+				
+            Cufon.replace('#social .right a', {hover:true});
+				
+            Cufon.replace('#work .left h3', {hover:true});
+				
+            Cufon.replace('h3', { textShadow: '0 2px rgba(0, 0, 0, 0.15)' });
+				
+            Cufon.replace('#contactinfo'), { hover: true };
+        });
+		
+    </script>
+		
+    <!-- jQuery lightbox -->		
+    <script type="text/javascript">
+			
+        $(document).ready(function(){
+				
+            $('#work .right a').lightBox();
+			
+        });
+		
+    </script>
+	
+    </head>
+	
+    <body>
+		
+        <div id="pagewrap">
+            <!-- Site header and navigation -->			
+            <div id="header">				
+                <ul id="navigation">
+                    <li>
+                        <a href="/"><img class="logo" logo="icon" src="~/App_Themes/Standard Theme/HackBase-1.png"></a>
+                    </li>
+                    <li>
+                        @using (Html.BeginForm("Search", "Search"))
+                        {
+                            <input type="text" name="text" />
+                            <input id="SearchSubmit" type="submit" value="Search" />
+                        }
+                    </li>
+                    <li>
+                        @using (Html.BeginForm("Index", "CreateIdea"))
+                        {
+                            <input id="CreateButton" type="submit" value="Create a new Hack Idea"></input>
+                        }
+                    </li>
+                    <li><div class="fb-login-button" data-size="xlarge" data-width="200px"></div></li>
+                </ul>			
+            </div>
+			
+			
+            <!-- Site content -->
+            <div id="content">
+				
+                <div id="about" class="page">
+					
+                    <div class="left">
+						
+                        <img src="images/author-photo.png" alt="photo">
+					
+                    </div>
+					
+                    <div class="right">
+						
+                        @RenderBody()
+					
+                    </div>
+				
+                </div>
+
+            </div>
+			
+            <div id="footer"></div>
+		
+        </div>
+	
+    </body>
 
 </html>
